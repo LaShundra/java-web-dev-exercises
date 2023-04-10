@@ -19,6 +19,20 @@ public class MenuItem {
         this.dateAdded = LocalDate.now();
     }
 
+    public String getName(String name){
+        return name;
+    }
+    public String getCatagory(){
+        return catagory;
+    }
+    public String getDescription(){
+        return description;
+    }
+
+    public Double getPrice(){
+        return price;
+    }
+
     public void setName(String name){
         this.name = name;
     }
@@ -34,26 +48,14 @@ public class MenuItem {
         this.price = price;
     }
 
-    public String getName(String name){
-        return name;
-    }
-    public String getCatagory(){
-        return catagory;
-    }
-    public String getDescription(){
-        return description;
-    }
 
-    public Double getPrice(){
-        return price;
-    }
     public LocalDate getDateAdded(){
         return dateAdded;
     }
     @Override
     public String toString(){
-        String nextText = isNew() ?"- New!" : "";
-        return  name + nextText + '\n' + description + " | $" + price;
+        String newText = isNew() ?" - New!" : "";
+        return  name + newText + '\n' + description + " | $" + price;
     }
     @Override
     public boolean equals(Object toBeCompared) {
@@ -76,9 +78,10 @@ public class MenuItem {
     }
 
     boolean isNew(){
-        LocalDate today = LocalDate.now();
-        double daysBetween = dateAdded.until(today, ChronoUnit.DAYS);
-        System.out.println(daysBetween + " days since " + name + " was added");
-        return daysBetween < 90;
+//        LocalDate today = LocalDate.now();
+//        double daysBetween = dateAdded.until(today, ChronoUnit.DAYS);
+//        System.out.println(daysBetween + " days since " + name + " was added");
+//        return daysBetween < 90;
+        return true;
     }
 }

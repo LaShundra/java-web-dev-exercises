@@ -22,7 +22,7 @@ public class Restaurant {
         menu.addItem(chickenWings);
         menu.addItem(cheeseCake);
 
-        System.out.println(menu);
+//        System.out.println(menu.getMenuItems().size());
 
         menu.removeItem(onionRings);
         System.out.println(menu);
